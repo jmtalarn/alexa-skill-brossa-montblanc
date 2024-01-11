@@ -1,0 +1,88 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "weekday",
+              "elicitationRequired": true,
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.189519667403.135051089905"
+              }
+            }
+          ],
+          "name": "OtherDayIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "weekday",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "que toca tirar {weekday}",
+                "que toca los {weekday}",
+                "dime que basura toca tirar {weekday}",
+                "dime que toca tirar los {weekday}",
+                "los {weekday}",
+                "el {weekday}"
+              ]
+            }
+          ],
+          "name": "OtherDayIntent",
+          "samples": [
+            "los {weekday}",
+            "el {weekday}",
+            "{weekday}",
+            "que basura toca tirar {weekday}",
+            "que toca tirar {weekday}",
+            "dime que toca los {weekday}",
+            "dime que toca tirar los {weekday}",
+            "que toca tirar los {weekday}",
+            "sabes que recogen el {weekday}",
+            "que toca tirar el {weekday}",
+            "que basura toca tirar el {weekday}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "que basura toca tirar hoy"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No se a que dia te refieres, dime por favor el dia que quieres consultar"
+          }
+        ],
+        "id": "Elicit.Slot.189519667403.135051089905"
+      }
+    ]
+  }
+}
